@@ -6,12 +6,20 @@ import static org.junit.Assert.*;
 public class Problem3Test {
     @Test
     public void catchTheBugInBook() {
-
+        BookFiction b1 = new BookFiction("Journey","Rachel","Fighting");
+        BookFiction b2 = new BookFiction(b1);
+        b1.setAuthor("Peng"); //even if only one attribute is changed, it will still work.
+        //b2.setTitle("Walking"); //will work when uncommented as well
+        assertTrue(b1.equals(b2)); //now only id is identical since the id was copied via copy constructor
     }
 
     @Test
     public void catchTheBugInMovie() {
-
+        MovieAction m1 = new MovieAction("Everyone", "Eating");
+        MovieAction m2 = new MovieAction(m1);
+        m1.setRating("No one"); //here both attributes are changed.
+        m1.setTitle("Sleeping");
+        assertTrue(m1.equals(m2));
     }
 
     // DO NOT REMOVE OR CHANGE ANYTHING BELOW THIS!
