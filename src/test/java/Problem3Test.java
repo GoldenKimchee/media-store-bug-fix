@@ -6,12 +6,12 @@ import static org.junit.Assert.*;
 public class Problem3Test {
     @Test
     public void catchTheBugInBook() {
-        // quiz
+
     }
 
     @Test
     public void catchTheBugInMovie() {
-        // quiz
+
     }
 
     // DO NOT REMOVE OR CHANGE ANYTHING BELOW THIS!
